@@ -140,7 +140,7 @@ img {
   border: none;
   outline: transparent;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .vis-on-tab {
     position: absolute;
     width: 1px;
