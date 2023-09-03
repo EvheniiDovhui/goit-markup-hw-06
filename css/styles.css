@@ -172,8 +172,7 @@ img {
   display: block;
   padding: 24px 0;
 }
-
-.nav.link.nav.link.current::after {
+.current::after {
   content: '';
   position: absolute;
   left: 0;
@@ -184,6 +183,9 @@ img {
 
   background-color: var(--OCEAN);
   border-radius: 2px;
+}
+.current.nav {
+  color: var(--OCEAN);
 }
 
 .nav-address.list {
@@ -1439,6 +1441,9 @@ button {
   line-height: 1.1;
   letter-spacing: var(--primary-letter-spacing);
   text-transform: capitalize;
+}
+.current.menu-nav {
+  color: var(--OCEAN);
 }
 .mobile-menu-tel {
   display: block;
