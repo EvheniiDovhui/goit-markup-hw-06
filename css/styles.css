@@ -270,7 +270,7 @@ img {
 .order-section {
   min-width: 320px;
   margin: 0 auto;
-  padding: 112px 54px;
+  padding: 112px 0;
 
   text-align: center;
 
@@ -701,6 +701,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  margin-bottom: 72px;
 }
 .logo-footer-web {
   text-decoration: none;
@@ -714,7 +715,6 @@ button {
   width: 268px;
   line-height: var(--primary-line-height);
   color: var(--cloud);
-  margin-bottom: 72px;
 }
 .footer-container-social {
   display: flex;
@@ -764,6 +764,9 @@ button {
   display: flex;
   flex-direction: column;
 }
+.subsckribe-form-label {
+  margin-bottom: 16px;
+}
 .subsckribe-form-input {
   min-width: 100%;
   max-height: 40px;
@@ -778,7 +781,6 @@ button {
   letter-spacing: 0.04em;
   transition: border-color var(--animation);
   outline: transparent;
-  margin-bottom: 16px;
 }
 .subsckribe-form-input::placeholder {
   color: #ccc;
@@ -1182,8 +1184,8 @@ button {
   padding: 72px 24px 24px 24px;
 
   transform: translate(-50%, -50%);
-
-  width: 408px;
+  min-width: 320px;
+  max-width: 408px;
   min-height: 584px;
   border-radius: 4px;
   background: var(--Dairy);
