@@ -87,13 +87,20 @@
             <li class="row-item">
               <a class="portfolio-photo-link link" href="">
                 <div class="bestsellers-box">
-                  <img
-                    class="portfolio-img"
-                    src="./images/portfolio/banking_img_1.jpg"
-                    alt="Banking App Interface Concept"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        /images/portfolio/img-desk.jpg     1x,
+                        ./images/portfolio/img-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                      media="max-width: 1158px"
+                    />
+                    <img
+                      src="./images/portfolio/img-desk.jpg"
+                      alt="Banking App Interface Concept"
+                    />
+                  </picture>
                   <p class="owerlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -108,7 +115,7 @@
                 </div>
               </a>
             </li>
-            <li class="row-item">
+            <!-- <li class="row-item">
               <a class="portfolio-photo-link link" href="">
                 <div class="bestsellers-box">
                   <img
@@ -285,7 +292,7 @@
                   <p class="text-fltr-results">Web Site</p>
                 </div>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -1650,6 +1657,95 @@
         </defs>
       </svg>
     </footer>
+    <!--Modal window-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black-18dp1"></use>
+          </svg>
+        </button>
+        <p class="modal-caption">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form" name="review-form" autocomplete="off">
+          <div class="modal-label">
+            <label class="modal-form-field" for="user-name"> Name</label>
+            <div class="modal-input">
+              <input
+                class="modal-form-input"
+                id="user-name"
+                type="text"
+                name="user-name"
+                placeholder=""
+              />
+              <svg class="modal-form-icone" width="18" height="24">
+                <use href="./images/icons.svg#icon-person-black-18dp1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-label">
+            <label class="modal-form-field" for="user-phone">Phone</label>
+            <div class="modal-input">
+              <input
+                class="modal-form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                placeholder=""
+              />
+              <svg class="modal-form-icone" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone-black-18dp1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-label">
+            <label class="modal-form-field" for="user-email">Email</label>
+            <div class="modal-input">
+              <input
+                class="modal-form-input"
+                type="email"
+                name="user-email"
+                id="user-email"
+                placeholder=""
+              />
+              <svg class="modal-form-icone" width="18" height="24">
+                <use href="./images/icons.svg#icon-email-black-18dp1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-label-comment">
+            <label class="modal-form-field" for="user-comment">Comment</label>
+            <textarea
+              class="modal-form-comment"
+              name="user-comment"
+              id="user-comment"
+              rows="8"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="modal-agreement">
+            <input
+              class="modal-form-checkbox visually-hidden"
+              type="checkbox"
+              id="user-privacy"
+              value="true"
+              name="user-privacy"
+            />
+            <label class="modal-form-text" for="user-privacy">
+              <span class="modal-form-custom-chekbox">
+                <svg class="modal-form-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="modal-form-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="form-button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
     <!-- MODAL MENU -->
     <div class="menu-modal js-menu-container" id="mobile-menu">
       <div class="mobile-menu-container">
@@ -1662,12 +1758,10 @@
           <nav>
             <ul class="mobile-menu-nav list">
               <li class="mobile-menu-nav-item">
-                <a class="menu-nav link" href="./index.html">Studio</a>
+                <a class="current menu-nav link" href="./index.html">Studio</a>
               </li>
               <li class="mobile-menu-nav-item">
-                <a class="current menu-nav link" href="./portfolio.html"
-                  >Portfolio</a
-                >
+                <a class="menu-nav link" href="./portfolio.html">Portfolio</a>
               </li>
               <li class="mobile-menu-nav-item">
                 <a class="menu-nav link" href="">Contacts</a>
@@ -1728,6 +1822,5 @@
     </div>
     <script src="./js/search.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/daytumbler.js"></script>
   </body>
 </html>
